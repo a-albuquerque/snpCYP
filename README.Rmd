@@ -46,132 +46,34 @@ ls("package:snpCYP")
 data(package="snpCYP")
 ```
 
-There are **4** datasets that are able to be accessed by the user:
-
-**1. PossibleCpGIslands** is a fabricated (fake) dataset, that is a DNA strand
-in the form of a string of nucleotides, that can be used as an example dataset
-to calculate the amount of CpG islands are present in a DNA strand.
-
-**2. MethylationObservation** is a dataset retrieved from a study performed
-on *Ceratina calcarata* at the University of Georgia, where mapping of 
-methylation and quantification of gene expression was completed (GSE111611). 
-The DNA sequence before and after bisulfite conversion are found in this 
-dataset.
-
-**3. BeforeBariatricSurgery** is a dataset retrieved from a study performed
-at INSERM on overweight adults who would be recieving bariatric surgery 
-(GSE66306). This dataset includes the patients RNAseq data before the surgery.
-
-**4. AfterBariatricSurgery** is a dataset retrieved from a study performed
-at INSERM on overweight adults who had recieved bariatric surgery. 
-(GSE66306).This dataset includes the patients RNAseq data after the surgery.
+Data sets available to the users are:
 
 
-There are **5** functions that are able to be accessed by the user:
 
-**1. differencesInGeneExpression** allows for users to be able to compare two
-different RNAseq data from two different DNA strands (preferably with 
-different methylation) and see the *n* genes with the largest difference in 
-expression between the two RNAseq datasets in a graph. The user is able to 
-specify *n*, which is the number of genes shown in the graphical output.
+Functions available to the user are: 
 
-**2. findCpGIslands** allows for users to be able to determine how many CpG
-islands are present in their DNA strand, as well as view where the CpG islands
-are in the DNA strand as this function will output the nucleotides of the
-given strand with the CpG islands highlighted.
 
-**3. findDifferencesInDNASequence** allows for users to be able to determine
-which nucleotides between two strands of DNA are different. This function will
-output the two DNA strands with the nucleotides that differ between the strands
-highlighted.
-
-**4. findMethylatedCytosines** allows for user to compare a DNA sequence before
-and after bisulfite conversion, and determine which cytosine nucleotides are
-methylated or not. This function will output the original DNA strand (before
-bisulfite conversion) with the cytosines that are methylated highlighted.
-
-**5. runMethylExpress** allows for the user to run the shiny app for MethylExpress
-so that they can interact with all of the functionalities of the package
-through a GUI instead of the R commandline.
-
-For more details about the functions, please take a look at the vignette for
-this package:
+Please check this package's vignette for detailed information on the functions
+provided: 
 
 ```{r eval=FALSE}
 browseVignettes("snpCYP")
 ```
 
-The package tree structure is provided below:
+This package is structered according to the following tree:
 
 ``` r
-- MethylExpress
-  |- MethylExpress.Rproj
-  |- DESCRIPTION
-  |- NAMESPACE
-  |- LICENSE
-  |- README
-  |- data
-    |- AfterBariatricSurgery.rda
-    |- BeforeBariatricSurgery.rda
-    |- MethylationObservation.rda
-    |- PossibleCpGIslands.rda
-  |- inst
-    |- extdata
-      |- MethylExpressOverview.png
-    |- shiny-scripts
-      |- app.R
-  |- man
-    |- AfterBariatricSurgery.Rd
-    |- BeforeBariatricSurgery.Rd
-    |- countCpGIslands.Rd
-    |- differencesInGeneExpression.Rd
-    |- DNASequenceHighlights.Rd
-    |- findCpGIslands.Rd
-    |- findDifferenceOfExpression.Rd
-    |- findDifferencesInDNASequence.Rd
-    |- findMatchingSections.Rd
-    |- findMethylatedCytosines.Rd
-    |- highlight.Rd
-    |- MethylationObservation.Rd
-    |- observedAndExpected.Rd
-    |- PossibleCpGIslands.Rd
-    |- runMethylExpress.Rd
-  |- R
-    |- data.R
-    |- differencesInGeneExpression.R
-    |- findCpGIslands.R
-    |- findDifferencesInDNASequence.R
-    |- findMethylatedCytosines.R
-    |- runMethylExpress.R
-  |- vignettes
-    |- differencesInGeneExpressionExResult.png
-    |- findCpGIslandsExResult.png
-    |- findDifferencesInDNASequenceExResult.png
-    |- findMethylatedCytosinesExResult.png
-    |- MethylExpressVignette.Rmd
-    |- runMethylatedExpressExResult.png
-  |- tests
-    |- testthat.R
-    |- testthat
-    |- test-DifferencesInGeneExpression.R
-    |- test-FindCpGIslands.R
-    |- test-FindDifferencesInDNASequence.R
-    |- test-FindMethylatedCytosines.R
+TODO rebuild tree after finishing
 ```
 
-An overview of the package is illustrated below 
+Overview of snpCYP package functional structure 
 (change this to refer to correct picture folder):
-<!-- [](./inst/extdata/MethylExpressOverview.png) -->
+<!-- [](./inst/extdata/snpCYP.png) -->
 
 ## Contributions
 The author of this package is Alcides Albuquerque.
 
-For the function **DifferencesInGeneExpression**, I use the R package 
-*ggplot2* to be able to plot the different amounts of gene expression.
-
-For the functions **FindCpGIslands**, **FindDifferencesInDNASequence**, and
-**FindMethylatedCytosines**, I use *rstudioapi* to be able to display my
-markdown files (with the highlights) in the Rstudio Viewer panel.
+TODO: detail **each function's supporting external package**
 
 
 ## References
