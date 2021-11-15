@@ -1,0 +1,24 @@
+HTTP/1.1 200 OK
+Date: Mon, 15 Nov 2021 21:02:25 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Frame-Options: sameorigin
+Content-Type: text/html
+Transfer-Encoding: chunked
+
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+<title>Grid Gateway Error</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<table align="center" border="0" cellpadding="5" cellspacing="5"><tr><td align="center" nowrap="1"><font size="+2"><b>Grid Gateway Interface</b></font><div align="right">v2.2.8</div></td><td align="center" bgcolor="#204286" rowspan="2" valign="middle"><a href="../../wiki/sunyaevlab/"><img alt="Sunyaev Lab" border="0" src="../../pph2/img/HMS_BWH_Logo.png" /></a><br><a href="../../wiki/sunyaevlab/" style="font-weight:bold;font-size:80%;color:white">Sunyaev Lab</a></td></tr><tr><td align="center" nowrap="1" valign="bottom"><a href="../help.html" target="_blank">Help</a> | <a href="../faq.html" target="_blank">Troubleshooting/FAQ</a></td></tr></table><hr width="95%" color="#c00000"><table align="center" border="0"><tr><td><table align="center" border="0" width="75%"><tr><td><h3>Grid Gateway Error:</h3><table cellspacing="5"><tr><td>&nbsp;&nbsp;</td> <td><code>Grid Engine error: Unable to run job: unable to contact qmaster using port 536 on host &quot;anko&quot;.<br>
+Exiting..</code></td></tr></table><p><b>Service Name:</b> <a href="../../pph2/index.shtml">PolyPhen-2</a><p><b>Session ID:</b> 2fda5d94d5d8558e02a17667c0dd6230299e5e49<p>Please, fix your input and <a href="../../pph2/index.shtml">try again.</a> If the error persists, <a href="mailto:iadzhubey@rics.bwh.harvard.edu">e-mail us</a> the complete text of error message above, together with the date and time it has occurred.</p></td></tr></table></td></tr></table><p><hr width="95%" color="#c00000"><table align="center" border="0" cellpadding="0" cellspacing="3" width="95%"><tr><td align="left" nowrap="1"><a href="mailto:iadzhubey@rics.bwh.harvard.edu">E-mail us</a></td><td align="right" nowrap="1">Created: Mon Nov 15 16:05:30 2021</td></tr></table>
+</body>
+</html>
+</body>
+</html>
