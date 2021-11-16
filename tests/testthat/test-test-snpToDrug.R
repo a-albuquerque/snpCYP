@@ -3,5 +3,9 @@ test_that("Unknown isoform", {
 })
 
 test_that("Valid isoform", {
-  expect_true("omeprazol" %in% snpToDrug("CYP1A2"))
+  expect_true("omeprazole" %in% unlist(strsplit(snpToDrug("CYP1A2")[[1]], ",")))
+})
+
+test_that("Valid isoform", {
+  expect_true(" cimetidine" %in% unlist(strsplit(snpToDrug("CYP1A2")[[1]], ",")))
 })

@@ -1,4 +1,4 @@
-# Server currently offline
+# Still in construction, Server currently offline
 
 #' Generating a prediction of the potential phenotypical damage a snp may cause
 #'
@@ -33,15 +33,9 @@
 #' Current Protocols in Human Genetics, 76 (1), 7–20.
 #'
 #' @export
-#' @import curl
-#' @import httr
-#' @import stringr
 
 snpToPred <- function(prot, pos, aa1, aa2) {
 
-  library(httr)
-  library(curl)
-  #library(crul)
 
   if (!is.character(aa1)){
     stop("Original aminoacid not a valid single-letter code")

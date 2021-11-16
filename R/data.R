@@ -33,10 +33,11 @@
 #' \item{name}{Name of CYP isoform.}
 #' \item{baseSeq}{aminoacid sequence of wild type isoform}
 #' }
+#' }
 #'
 #' @references
 #' The UniProt Consortium
-#' UniProt: the universal protein knowledgebase in 2021
+#' UniProt: the universal protein knowledgeable in 2021
 #' Nucleic Acids Res. 49:D1 (2021)
 #'
 #'
