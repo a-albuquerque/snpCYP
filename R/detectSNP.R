@@ -40,6 +40,9 @@
 #'
 #' @export
 #' @import stringr
+#' @import assertthat
+#' @import graphics
+
 
 detectSNP <- function(CYPs, seqs) {
 

@@ -26,12 +26,8 @@
 #'
 #'
 #' @export
-#' @import stringr
-#' @import assertthat
 
 snpToDrug <- function(CYP) {
-
-  library(assertthat)
 
   if (!is.string(CYP)){
     stop("CYP isoform must be provided as string")

@@ -33,11 +33,11 @@
 #'
 #' @export
 #' @import stringr
+#' @import assertthat
+#' @import graphics
 
 snpDist <- function(CYP, seq) {
 
-  library(assertthat)
-  library(graphics)
 
   if (!is.string(CYP)){
     stop("CYP isoform must be provided as non empty string")
