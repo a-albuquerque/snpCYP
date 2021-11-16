@@ -3,10 +3,10 @@
 #' @source FDA, drug interaction and labeling (2021).
 #'
 #' @format{
-#' CYP drug interaction:
+#' Named vector of CYP drug interaction:
 #' \describe{
-#' \item{drug}{Interacting drug}
-#' \item{CYP isoform target}{List of drugs interacting with CYP isoform.}
+#' \item{name}{CYP isoform}
+#' \item{drugs}{List of drugs interacting with CYP isoform.}
 #' }
 #' }
 #'
@@ -20,3 +20,29 @@
 #'  drugs
 #' }
 "drugs"
+
+
+
+#' Wild type CYP isoform sequences
+#'
+#' @source UniprotKB (2021).
+#'
+#' @format{
+#' Named vector of CYP wild sequences
+#' \describe{
+#' \item{name}{Name of CYP isoform.}
+#' \item{baseSeq}{aminoacid sequence of wild type isoform}
+#' }
+#'
+#' @references
+#' The UniProt Consortium
+#' UniProt: the universal protein knowledgebase in 2021
+#' Nucleic Acids Res. 49:D1 (2021)
+#'
+#'
+#'
+#' @examples
+#' \dontrun{
+#'  baseSeqs
+#' }
+"baseSeqs"
