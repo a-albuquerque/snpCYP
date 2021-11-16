@@ -1,3 +1,5 @@
+# Server currently offline
+
 #' Generating a prediction of the potential phenotypical damage a snp may cause
 #'
 #' This function generates a probabilistic prediction of damage by probing

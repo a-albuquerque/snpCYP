@@ -1,3 +1,7 @@
-test_that("multiplication works", {
-  expect_equal(2 * 2, 4)
+test_that("Unknown isoform", {
+  expect_equal(snpToDrug("CYP1A7"), "No drug associated")
+})
+
+test_that("Valid isoform", {
+  expect_true("omeprazol" %in% snpToDrug("CYP1A2"))
 })
