@@ -1,6 +1,6 @@
 # Server currently offline
 
-#' Outputing drugs in clinical use which metabolism is potentially discrupted
+#' Outputting drugs in clinical use which metabolism is potentially disrupted
 #' by a critical snp at the provided CYP isoform
 #'
 #'
@@ -9,7 +9,7 @@
 #'            CYP2C19, CYP2D6, CYP3A4
 #'
 #'
-#' @returns List of drug which metabolism is potentially discrupted
+#' @returns List of drug which metabolism is potentially disrupted
 #'          by a critical snp at the provided CYP isoform
 #'
 #' @examples

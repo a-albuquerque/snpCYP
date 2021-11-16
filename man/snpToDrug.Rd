@@ -2,7 +2,7 @@
 % Please edit documentation in R/snpToDrug.R
 \name{snpToDrug}
 \alias{snpToDrug}
-\title{Outputing drugs in clinical use which metabolism is potentially discrupted
+\title{Outputting drugs in clinical use which metabolism is potentially disrupted
 by a critical snp at the provided CYP isoform}
 \usage{
 snpToDrug(CYP)
@@ -12,11 +12,11 @@ snpToDrug(CYP)
 CYP2C19, CYP2D6, CYP3A4}
 }
 \value{
-List of drug which metabolism is potentially discrupted
+List of drug which metabolism is potentially disrupted
          by a critical snp at the provided CYP isoform
 }
 \description{
-Outputing drugs in clinical use which metabolism is potentially discrupted
+Outputting drugs in clinical use which metabolism is potentially disrupted
 by a critical snp at the provided CYP isoform
 }
 \examples{

@@ -48,13 +48,36 @@ browseVignettes("snpCYP")
 
 This package is structured according to the following tree:
 
--   snpCYP \|- snpCYP.Rproj \|- DESCRIPTION \|- NAMESPACE \|- LICENSE
-    \|- README \|- data \|- baseSeqs.rda \|- drugs.rda \|- inst \|-
-    extdata \|- README \|- man \|- figures \|- R \|- data.R \|-
-    detectSNP.R \|- snpDist.R \|- snpToDrug.R \|- snpToPred.R \|-
-    vignettes \|- tests \|- testthat.R \|- testthat \|-
-    test-test-detectSNP.R \|- test-test-snpDist.R \|-
-    test-test-snpToDrug.R \|- test-test-snpToPred.R
+``` r
+- snpCYP
+  |- snpCYP.Rproj
+  |- DESCRIPTION
+  |- NAMESPACE
+  |- LICENSE
+  |- README
+  |- data
+    |- baseSeqs.rda
+    |- drugs.rda
+  |- inst
+    |- extdata
+      |- README
+  |- man
+    |- figures
+  |- R
+    |- data.R
+    |- detectSNP.R
+    |- snpDist.R
+    |- snpToDrug.R
+    |- snpToPred.R
+  |- vignettes
+  |- tests
+    |- testthat.R
+    |- testthat
+      |- test-test-detectSNP.R
+      |- test-test-snpDist.R
+      |- test-test-snpToDrug.R
+      |- test-test-snpToPred.R
+```
 
 ## Contributions
 

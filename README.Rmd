@@ -65,6 +65,7 @@ browseVignettes("snpCYP")
 
 This package is structured according to the following tree:
 
+```{r eval=FALSE}
 - snpCYP
   |- snpCYP.Rproj
   |- DESCRIPTION
@@ -93,6 +94,7 @@ This package is structured according to the following tree:
       |- test-test-snpDist.R
       |- test-test-snpToDrug.R
       |- test-test-snpToPred.R
+```
 
 
 ## Contributions

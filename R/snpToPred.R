@@ -64,6 +64,8 @@ snpToPred <- function(prot, pos, aa1, aa2) {
 
   cat(rawToChar(res$content))
 
+  # Download results when server is back online
+
   return (TRUE)
 
   # Server currently offline
