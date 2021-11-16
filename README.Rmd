@@ -18,13 +18,14 @@ knitr::opts_chunk$set(
 
 The purpose of snpCYP is to streamline and automate the process of
 reading and analyzing single nucleotide polymorphisms (SNP) on CYP genes
-and to easily allow for exploratory analysis by graphically outputting the 
-potential disruptions on drug metabolism by correlating the SNPs to known
-or predicted catalytic activity from PolyPhen-2 and DIDB databases. The 
-packet uniquely improves current ability of researchers to automate their 
-work flow by adding non existing R language support for correlating sample’s 
-SNP’s/haplotypes to potential disruption on drug metabolism. This project
-was developed using R 4.0.2 on MacOs 11.6.
+It is supposed to allow for easier exploratory analysis by graphically 
+outputting the nsSNP distribution and their potential disruptions on drug 
+metabolism by correlating the SNPs to known or predicted catalytic activity 
+from PolyPhen-2 and DIDB databases. The  packet uniquely improves current 
+ability of researchers to automate their work flow by adding non existing 
+R language support for correlating sample’s SNP’s/haplotypes to potential 
+disruption on drug metabolism. This project was developed using R 4.0.2 on 
+MacOs 11.6.
 
 
 ## Installation
@@ -52,6 +53,8 @@ Data sets available to the users are:
 
 Functions available to the user are: 
 
+baseSeqs.rda
+drugs.rda
 
 Please check this package's vignette for detailed information on the functions
 provided: 
@@ -60,20 +63,40 @@ provided:
 browseVignettes("snpCYP")
 ```
 
-This package is structered according to the following tree:
+This package is structured according to the following tree:
 
-``` r
-TODO rebuild tree after finishing
-```
+- snpCYP
+  |- snpCYP.Rproj
+  |- DESCRIPTION
+  |- NAMESPACE
+  |- LICENSE
+  |- README
+  |- data
+    |- baseSeqs.rda
+    |- drugs.rda
+  |- inst
+    |- extdata
+      |- README
+  |- man
+    |- figures
+  |- R
+    |- data.R
+    |- detectSNP.R
+    |- snpDist.R
+    |- snpToDrug.R
+    |- snpToPred.R
+  |- vignettes
+  |- tests
+    |- testthat.R
+    |- testthat
+      |- test-test-detectSNP.R
+      |- test-test-snpDist.R
+      |- test-test-snpToDrug.R
+      |- test-test-snpToPred.R
 
-Overview of snpCYP package functional structure 
-(change this to refer to correct picture folder):
-<!-- [](./inst/extdata/snpCYP.png) -->
 
 ## Contributions
 The author of this package is Alcides Albuquerque.
-
-TODO: detail **each function's supporting external package**
 
 
 ## References
