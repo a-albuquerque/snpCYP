@@ -9,20 +9,20 @@
 #' associated with the prediction
 #'
 #'
-#' @param prot UniProtKB identifier of the CYP to be analyzed
+#' @param prot UniProtKB identifier of the CYP to be analyzed, string
 #'
-#' @param pos Position of the nucleotide polymorphism
+#' @param pos Position of the nucleotide polymorphism, string
 #'
-#' @param aa1 Original (or wild type) aminoacid, single letter code
+#' @param aa1 Original (or wild type) aminoacid, single letter code, char
 #'
-#' @param aa2 Mutant aminoacid, single letter code
+#' @param aa2 Mutant aminoacid, single letter code, char
 #'
-#' @returns Probability of the provided mutation to cause phenotipical
+#' @returns Probability of the provided mutation to cause phenotypical
 #' enzymatic damage.
 #'
 #' @examples
 #' \dontrun{
-#' snpToPred(O95479, 453, "R", "Q")
+#' snpToPred("O95479", "453", "R", "Q")
 #' }
 #'
 #' @references
@@ -37,7 +37,9 @@
 
 snpToPred <- function(prot, pos, aa1, aa2) {
 
+  library(httr)
   library(curl)
+  #library(crul)
 
   if (!is.character(aa1)){
     stop("Original aminoacid not a valid single-letter code")
@@ -48,20 +50,26 @@ snpToPred <- function(prot, pos, aa1, aa2) {
   }
 
   fileConn<-file("singleSNP.txt")
-  writeLines(c(paste("O95479", "453", "R", "Q")), fileConn)
+  writeLines(c(paste(prot, pos, aa1, aa2)), fileConn)
   close(fileConn)
 
-  url    <- "http://genetics.bwh.harvard.edu/ggi/cgi-bin/ggi2.cgi"
-  result <- POST(url, `_ggi_project`="PPHWeb2",
-                `_ggi_origin`="query",
-                `_ggi_target_pipeline`="1",
-                MODELNAME="HumDiv",
-                UCSCDB="hg19",
-                SNPFUNC="m",
-                `_ggi_batch_file`=upload_file("singleSNP.txt"),
-                body = list())
+  x <- HttpClient$new(url = "http://genetics.bwh.harvard.edu")
 
+  res <- x$post(path="ggi/cgi-bin/ggi2.cgi",
+                encode = "form",
+                body = c(
+                  `_ggi_project`='PPHWeb2',
+                  `_ggi_origin`='query',
+                  `_ggi_target_pipeline`='1',
+                  MODELNAME='HumDiv',
+                  UCSCDB='hg19',
+                  SNPFUNC='m',
+                  `ggi_batch_file`=upload_file("singleSNP.txt")))
 
-  cat(rawToChar(result$content))
+  cat(rawToChar(res$content))
+
+  return (TRUE)
+
+  # Server currently offline
 }
 
