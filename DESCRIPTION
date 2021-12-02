@@ -1,9 +1,9 @@
 Package: snpCYP
 Type: Package
-Title: Assessing potential SNP impact on CYP cathalitic activity
+Title: Assessing potential snp impact on CYP cathalitic activity
 Version: 0.1.9001
 Imports: stringr, assertthat
-Author: Alcides Albuquerque
+Author: Authors@R: person("A", "Albuquerque", email = "a.albuquerque@mail.utoronto.ca", role = c("aut", "cre"))
 Maintainer: Alcides Albuquerque <a.albuquerque@mail.utoronto.ca>
 Description: snpCYP is a tool to automate annotation retrieval and prediction
    of impact of human SNP at CYP genes on drug metdabolism.
