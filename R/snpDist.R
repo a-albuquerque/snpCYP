@@ -18,6 +18,7 @@
 #'
 #' @examples
 #' \dontrun{
+#' load(file = "./data/baseSeqs.rda")
 #' snpDist("CYP1A2",
 #'     paste("MALSQSVPFSATELLLASAIFCLVFWVLKGLRPRVPKGLKSPPEPWGWPLLGHVLTLGKN",
 #'           "PHLALSRMSQRYGDVLQIRIGSTPVLVLSRLDTIRQALVRQGDDFKGRPDLYTSTLITDG",
@@ -46,8 +47,6 @@ snpDist <- function(CYP, seq) {
   if (!is.string(seq)){
     stop("CYP sequences must be provided as a string")
   }
-
-  load(file = "./data/baseSeqs.rda")
 
   counts <- vector()
   sections <- vector()
