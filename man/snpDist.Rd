@@ -23,6 +23,7 @@ each sequential group of 50 aminoacids at the CYP isoform provided.
 }
 \examples{
 \dontrun{
+load(file = "./data/baseSeqs.rda")
 snpDist("CYP1A2",
     paste("MALSQSVPFSATELLLASAIFCLVFWVLKGLRPRVPKGLKSPPEPWGWPLLGHVLTLGKN",
           "PHLALSRMSQRYGDVLQIRIGSTPVLVLSRLDTIRQALVRQGDDFKGRPDLYTSTLITDG",

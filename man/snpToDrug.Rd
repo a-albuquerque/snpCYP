@@ -3,7 +3,7 @@
 \name{snpToDrug}
 \alias{snpToDrug}
 \title{Outputting drugs in clinical use which metabolism is potentially disrupted
-by a critical snp at the provided CYP isoform}
+by a critical SNP at the provided CYP isoform}
 \usage{
 snpToDrug(CYP)
 }
@@ -13,11 +13,11 @@ CYP2C19, CYP2D6, CYP3A4}
 }
 \value{
 List of drug which metabolism is potentially disrupted
-         by a critical snp at the provided CYP isoform
+         by a critical SNP at the provided CYP isoform
 }
 \description{
 Outputting drugs in clinical use which metabolism is potentially disrupted
-by a critical snp at the provided CYP isoform
+by a critical SNP at the provided CYP isoform
 }
 \examples{
 \dontrun{
