@@ -1,7 +1,6 @@
-# Server currently offline
 
 #' Outputting drugs in clinical use which metabolism is potentially disrupted
-#' by a critical snp at the provided CYP isoform
+#' by a critical SNP at the provided CYP isoform
 #'
 #'
 #'
@@ -10,7 +9,7 @@
 #'
 #'
 #' @returns List of drug which metabolism is potentially disrupted
-#'          by a critical snp at the provided CYP isoform
+#'          by a critical SNP at the provided CYP isoform
 #'
 #' @examples
 #' \dontrun{
