@@ -72,7 +72,7 @@ snpDist <- function(CYP, seq) {
   }
 
 
-  barplot(counts, xlab="Protein Section", ylab="Number of nsSNP",
+  graphics::barplot(counts, xlab="Protein Section", ylab="Number of nsSNP",
           main="Distribution of nsSNP across sequence", names.arg=sections, col="red")
 
 

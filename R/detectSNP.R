@@ -86,7 +86,7 @@ detectSNP <- function(CYPs, seqs) {
 
   }
 
-  barplot(counts, xlab="CYP isoform", ylab="Number of nsSNP",
+  graphics::barplot(counts, xlab="CYP isoform", ylab="Number of nsSNP",
           main="Distribution of nsSNP across sample isoforms", names.arg=CYPs, col="green")
 
   return (positions)
