@@ -1,6 +1,6 @@
 
 #' Outputting drugs in clinical use which metabolism is potentially disrupted
-#' by a critical SNP at the provided CYP isoform
+#' by a critical SNP at the provided CYP isoform. drugs.rda must be loaded.
 #'
 #'
 #'
@@ -13,6 +13,7 @@
 #'
 #' @examples
 #' \dontrun{
+#' load(file = "./data/drugs.rda")
 #' snpToDrug("CYP2D6")
 #' }
 #'
@@ -37,8 +38,6 @@ snpToDrug <- function(CYP) {
   if (!CYP%in%isoforms){
     return ("No drug associated")
   }
-
-  load(file = "./data/drugs.rda")
 
   result <- drugs[CYP]
 

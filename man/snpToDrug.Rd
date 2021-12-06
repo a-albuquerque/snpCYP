@@ -3,7 +3,7 @@
 \name{snpToDrug}
 \alias{snpToDrug}
 \title{Outputting drugs in clinical use which metabolism is potentially disrupted
-by a critical SNP at the provided CYP isoform}
+by a critical SNP at the provided CYP isoform. drugs.rda must be loaded.}
 \usage{
 snpToDrug(CYP)
 }
@@ -17,10 +17,11 @@ List of drug which metabolism is potentially disrupted
 }
 \description{
 Outputting drugs in clinical use which metabolism is potentially disrupted
-by a critical SNP at the provided CYP isoform
+by a critical SNP at the provided CYP isoform. drugs.rda must be loaded.
 }
 \examples{
 \dontrun{
+load(file = "./data/drugs.rda")
 snpToDrug("CYP2D6")
 }
 

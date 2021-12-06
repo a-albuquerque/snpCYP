@@ -3,7 +3,8 @@
 #'
 #' This function generates a graphic output of the number of nsSNPs in each
 #' of the following CYP isoforms (if provided): CYP1A2, CYP2B6, CYP2C8,
-#' CYP2C9, CYP2C19, CYP2D6, CYP3A4
+#' CYP2C9, CYP2C19, CYP2D6, CYP3A4. baseSeqs.rda or a custom sequence
+#' of wild isoforms must be loaded.
 #'
 #'
 #'
@@ -16,6 +17,7 @@
 #'
 #' @examples
 #' \dontrun{
+#' load(file = "./data/baseSeqs.rda")
 #' detectSNP(list("CYP1A2", "CYP2B6"),
 #'list(paste("ASASQSVPFSATELLLASAIFCLVFWVLKGLRPRVPKGLKSPPEPWGWPLLGHVLTLGKN",
 #'           "PHLALSRMSQRYGDVLQIRIGSTPVLVLSRLDTIRQALVRQGDDFKGRPDLYTSTLITDG",
@@ -54,8 +56,6 @@ detectSNP <- function(CYPs, seqs) {
   if (!is.string(seqs[[1]])){
     stop("CYP sequences must be provided as list of strings")
   }
-
-  load(file = "./data/baseSeqs.rda")
 
   counts <- vector()
   positions <- vector()

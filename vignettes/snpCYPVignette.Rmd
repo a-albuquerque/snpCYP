@@ -77,6 +77,7 @@ In the following example, we are providing 2 sequences from the same individual
 (artificial), corresponding to isoforms 1A2 and 2B6.
 
 ``` {r eval=FALSE}
+load(file = "./data/baseSeqs.rda")
 detectSNP(list("CYP1A2", "CYP2B6"),
            list(paste("ASASQSVPFSATELLLASAIFCLVFWVLKGLRPRVPKGLKSPPEPWGWPLLGHVLTLGKN",
                       "PHLALSRMSQRYGDVLQIRIGSTPVLVLSRLDTIRQALVRQGDDFKGRPDLYTSTLITDG",
@@ -127,6 +128,7 @@ We will use now call to the function providing an artificial sequence
 for the isoform 1A2:
 
 ```{r eval=FALSE}
+load(file = "./data/baseSeqs.rda")
 snpDist("CYP1A2",
 paste("AALSQSVPFSATELLLASAIFCLVFWVLKGLRPRVPKGLKSPPEPWGWPLLGHVLTLGKN",
 "LALALSRMSQRYGDVLQIRIGSTPVLVLSRLDTIRQALVRQGDDFKGRPDLYTSTLITDG",
@@ -174,6 +176,7 @@ as a string.
 **Example of Using the Function**
 
 ``` {r eval=FALSE}
+load(file = "./data/drugs.rda")
 snpToDrug("CYP1A2")
 ```
 

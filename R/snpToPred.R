@@ -45,7 +45,7 @@ snpToPred <- function(prot, pos, aa1, aa2) {
     stop("Mutated aminoacid not a valid single-letter code")
   }
 
-  fileConn<-file("singleSNP.txt")
+  fileConn<-file("./data/singleSNP.txt")
   writeLines(c(paste(prot, pos, aa1, aa2)), fileConn)
   close(fileConn)
 
