@@ -45,3 +45,6 @@ snpToDrug <- function(CYP) {
 
 }
 
+
+# [END]
+

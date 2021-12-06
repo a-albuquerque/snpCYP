@@ -71,3 +71,5 @@ snpToPred <- function(prot, pos, aa1, aa2) {
   # Server currently offline
 }
 
+
+# [END]
