@@ -1,0 +1,13 @@
+citHeader("To cite snpCYP in publications use:")
+
+citEntry(
+  entry    = "Unpublished",
+  title    = "snpCYP: a package to facilitate exploring SNPs in CYP proteins",
+  author   = "Alcides Albuquerque",
+  note     = "Unpublished",
+  year     = "2021",
+  url      = "https://github.com/a-albuquerque/snpCYP",
+  textVersion = paste(
+"Albuquerque, A. (2021) snpCYP: a package to facilitate exploring SNPs in CYP proteins. Unpublished. URL https://github.com/a-albuquerque/snpCYP"
+  )
+)
