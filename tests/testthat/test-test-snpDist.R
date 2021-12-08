@@ -1,3 +1,8 @@
+# This test should detect multiple SNPs in a sample of CYP1A2
+# and plot them to their location in the mutated protein:
+# 0  50 100 150 200 250 300 350 400 450
+# 1   2   3   3   4   3   2   2   1   1
+
 test_that("Distribution of nsSNP", {
   expect_equal(snpDist("CYP1A2",
                        paste("AALSQSVPFSATELLLASAIFCLVFWVLKGLRPRVPKGLKSPPEPWGWPLLGHVLTLGKN",

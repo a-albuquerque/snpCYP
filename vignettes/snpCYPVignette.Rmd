@@ -23,16 +23,21 @@ knitr::opts_chunk$set(
 
 ## Summary
 
-**snpCYP** is an R package to streamline and automate the process of reading and analyzing nonsynonymous single nucleotide polymorphisms (SNP) on CYP genes. It is supposed to allow for easier exploratory analysis by graphically outputting the nsSNP distribution and their potential disruptions on drug metabolism by correlating the SNPs to known or predicted catalytic activity from PolyPhen-2 and DIDB databases. 
+**snpCYP** is an R package to streamline and automate the process of reading and analyzing nonsynonymous single nucleotide polymorphisms (SNP) on CYP (cytochrome P450 enzyme) genes. It is supposed to allow for easier exploratory analysis by graphically outputting the nsSNP distribution and their potential disruptions on drug metabolism by correlating the SNPs to known from DIDB databases. 
 
 **This document gives a tour of snpCYP (version 0.1.9001)**. 
 It was written in R Markdown, using the [knitr](https://cran.r-project.org/package=knitr) package for production. See `help(package = "snpCYP")` for further details. 
 
-To download **snpCYP**, use the following commands:
+To download **snpCYP**, use the following commands,
+(user should also load basic data regarding wild-type
+CYP isoforms in order to run examples or shiny, unless if custom wild-type data 
+is to be provided):
 ``` {r eval=FALSE}
 require("devtools")
 install_github("a.albuquerque/snpCYP", build_vignettes = TRUE)
 library("snpCYP")
+load(file = "./data/baseSeqs.rda")
+load(file = "./data/drugs.rda")
 ```
 
 To list all sample functions available in the package:
@@ -189,61 +194,6 @@ pirfenidone, ramosetron, theophylline, ciprofloxacin, enoxacin, fluvoxamine,
 methoxsalen, mexiletine , estrogen, acyclovir, allopurinol, cimetidine, 
 peginterferon alpha-2a, piperine, zileuton, phenytoin, rifampin, ritonavir, 
 tobaco, teriflunomide"
-
-
-### 4. snpToPred
-
-#### Summary of the function
-
-**snpToPred** generates a prediction of the potential phenotypical damage a 
-nsSNP may cause to metabolic activity of the corresponding CYP isoform.
-
-It is supposed to generate a probabilistic prediction of disruption by probing
-the Polyphen-2 server engine and databases, which in turn perform analysis
-on the sequence, phylogenetic and structural information related to the
-provided substitution. The function is not currently working and is under
-construction. 
-
-The function first inject the query to the Polyphen-2 batch server (even in the
-case of one query only). The returning package contains the address (related
-to the generated session ID) in which the results will be available.
-
-The function should not be called more frequently than one every 60s due
-to Polyphen-2 limitations to prevent abuse, including by blocking the 
-client's ID. The user therefore should aggregate all queries into a .txt
-file whose path is provided to the function.
-
-The function is not currently (Nov 16th 2021) operational due to server
-downtime at the moment and implementation failures.
-
-The is supposed to return a probability of disruption (0 to 1) and the false 
-positive and true negative rate associated.
-
-#### How to use the function
-
-**Parameter Format / Examples**
-
-The first parameter, prot, is the UniProtKB identifier of the CYP isoform to be 
-analyzed, provided as a string. The pos parameter indicates the position of the 
-mutated residue polymorphism, also a string (!). aa1 corresponds to the original 
-(or wild type) residue, single-letter code. Finally aa2 corresponds to the
-mutant residue, also as single-letter code.
-
-**Example of Using the Function**
-
-In this example we are calling the function to query for the predicted
-probability of CYP3A4 (Uniprot ID P08684) to present enzymatic disturbance
-given it contains a substitution at the fourth position from Isoleucine
-(I) to Glutamine (Q).
-
-```{r eval=FALSE}
-snpToPred("P08684", "4", "I", "Q")
-```
-
-The function is supposed to return:
-
-prediction	 pph2_prob	  pph2_FPR	  pph2_TPR
-             0.091        0.71        0.97
 
 
 ## Package References

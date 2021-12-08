@@ -48,7 +48,6 @@
 
 detectSNP <- function(CYPs, seqs) {
 
-
   if (!is.string(CYPs[[1]])){
     stop("CYP isoform must be provided as non empty list of strings")
   }
@@ -63,7 +62,6 @@ detectSNP <- function(CYPs, seqs) {
   # To mark the position of each SNP
   positions <- vector()
 
-
   for (i in 1:length(CYPs)) {
 
     # Processing current mutated sequence
@@ -73,22 +71,22 @@ detectSNP <- function(CYPs, seqs) {
     wildForm <- baseSeqs[CYPs[[i]]]
     wildFormVector <- unlist(strsplit(wildForm, ""))
 
-
-
     count <- 0
 
     for (j in 1:length(wildFormVector)) {
 
       # Comparing each mutated sequence aa to its wild-type
       if (wildFormVector[[j]] != seqVector[[j]]) {
-        count = count + 1
+
+        count <- count + 1
+
         # Recoding position of SNP
         positions <- append(positions, c(CYPs[[i]], toString(j)))
+
       }
     }
     # Recording number of SNPs for the current isoform
     counts <- append(counts, count)
-
 
   }
 
