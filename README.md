@@ -16,15 +16,23 @@ project was developed using R 4.0.2 on MacOs 11.6.
 
 ## Installation
 
-To download the package:
+To download the package (user should also load basic data regarding
+wild-type CYP isoforms in order to run examples or shiny, unless if
+custom wild-type data is to be provided:
 
 ``` r
 require("devtools")
 devtools::install_github("a-albuquerque/snpCYP", build_vignettes = TRUE)
 library("snpCYP")
+load(file = "./data/baseSeqs.rda")
+load(file = "./data/drugs.rda")
 ```
 
-To run the shinyApp: Under construction
+To run the shinyApp:
+
+``` r
+snpCYP::runsnpCYP()
+```
 
 ## Overview
 
@@ -33,11 +41,10 @@ ls("package:snpCYP")
 data(package="snpCYP")
 ```
 
-Data sets available to the users are:
+Data sets available to the users are: baseSeqs.rda drugs.rda
 
-Functions available to the user are:
-
-baseSeqs.rda drugs.rda
+Functions available to the user are: snpDist() detectSNP() snpToDrug()
+runsnpCYP()
 
 Please check this package’s vignette for detailed information on the
 functions provided:
