@@ -38,6 +38,7 @@ install_github("a.albuquerque/snpCYP", build_vignettes = TRUE)
 library("snpCYP")
 load(file = "./data/baseSeqs.rda")
 load(file = "./data/drugs.rda")
+library("snpCYP") # second time
 ```
 
 To list all sample functions available in the package:
@@ -210,32 +211,29 @@ This vignette format was inspired by Dianna Callister's production:
 ## Other References
 
 Adzhubei, I., Jordan, D. M., & Sunyaev, S. R. (2013). Predicting
-functional effect of human missense mutations using PolyPhen-2. Current
-Protocols in Human Genetics, 76 (1), 7–20.
+functional effect of human missense mutations using PolyPhen-2. *Current
+Protocols in Human Genetics*, 76 (1), 7–20.
 
 Banerjee, P., Dunkel, M., Kemmler, E., & Preissner, R. (2020).
 SuperCYPsPred—a web server for the prediction of cytochrome activity.
-Nucleic Acids Research, 48 (W1), W580–W585.
+*Nucleic Acids Research*, 48 (W1), W580–W585.
 
-DIDB - the drug interaction database. (2021). In UW Drug Interaction
-Solutions. Washinton University.
+DIDB - the drug interaction database. (2021). *UW Drug Interaction
+Solutions*. Washinton University.
 <https://www.druginteractionsolutions.org/solutions/drug-interaction-database/>
 
-H. Wickham. ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag
-New York, 2016.
-
 Rostkowski, M., Spjuth, O., & Rydberg, P. (2013). WhichCyp: Prediction
-of cytochromes P450 inhibition. Bioinformatics, 29 (16), 2051–2052.
+of cytochromes P450 inhibition. *Bioinformatics*, 29 (16), 2051–2052.
 
 Wang, L.-L., Li, Y., & Zhou, S.-F. (2009). A bioinformatics approach for
 the phenotype prediction of nonsynonymous single nucleotide
-polymorphisms in human cytochromes P450. Drug Metabolism and
-Disposition, 37 (5), 977–991.
+polymorphisms in human cytochromes P450. *Drug Metabolism and
+Disposition*  37 (5), 977–991.
 
 Zhang, T., Zhou, Q., Pang, Y., Wang, Y., Jin, C., Huo, J., Liu, L. A., &
 Wei, D. (2012). CYP-nsSNP: A specialized database focused on effect of
-non-synonymous SNPs on function of CYPs. Interdisciplinary Sciences:
-Computational Life Sciences, 4 (2), 83–89.
+non-synonymous SNPs on function of CYPs. *Interdisciplinary Sciences:
+Computational Life Sciences*, 4 (2), 83–89.
 
 ----
 

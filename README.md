@@ -26,6 +26,7 @@ devtools::install_github("a-albuquerque/snpCYP", build_vignettes = TRUE)
 library("snpCYP")
 load(file = "./data/baseSeqs.rda")
 load(file = "./data/drugs.rda")
+library("snpCYP") # second time
 ```
 
 To run the shinyApp:
