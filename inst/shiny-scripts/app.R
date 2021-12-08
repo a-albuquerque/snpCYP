@@ -132,13 +132,13 @@ server <- function(input, output) {
   # This is called whenever the inputs change. The output functions
   # defined below then use the value computed from this expression
   drugList <- reactive({
-    snpToDrug(input$cyp)})
+    snpCYP::snpToDrug(input$cyp)})
 
   snpDistribution <- reactive({
-    snpDist(input$cyp, input$inputCYP)})
+    snpCYP::snpDist(input$cyp, input$inputCYP)})
 
   snpDetection <- reactive({
-    detectSNP(input$cyps,
+    snpCYP::detectSNP(input$cyps,
               list(input$input1A2, input$input2B6, input$input2C8,
                    input$input2C9, input$input2C19, input$input2D6,
                    input$input3A4)
