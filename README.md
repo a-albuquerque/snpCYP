@@ -60,7 +60,9 @@ This package is structured according to the following tree:
   |- snpCYP.Rproj
   |- DESCRIPTION
   |- NAMESPACE
+  |- NEWS.md
   |- LICENSE
+  |- LICENSE.md
   |- README
   |- data
     |- baseSeqs.rda
@@ -68,15 +70,28 @@ This package is structured according to the following tree:
   |- inst
     |- extdata
       |- README
+      |- shiny-scripts
+        |- app.R
   |- man
     |- figures
+    |- baseSeqs.Rd
+    |- detectSNP.Rd
+    |- drugs.Rd
+    |- runsnpCYP.Rd
+    |- snpDist.Rd
+    |- snpToDrug.Rd
+    |- snpToPred.Rd
   |- R
     |- data.R
     |- detectSNP.R
     |- snpDist.R
     |- snpToDrug.R
+    |- runsnpCYP.R
     |- snpToPred.R
   |- vignettes
+    |- nsSNP.png
+    |- snpCYPVignette.Rmd
+    |- snpDistPlot.png
   |- tests
     |- testthat.R
     |- testthat
@@ -85,6 +100,9 @@ This package is structured according to the following tree:
       |- test-test-snpToDrug.R
       |- test-test-snpToPred.R
 ```
+
+A possible use of the package is exploration of SNP on CYP sequences:
+![](./inst/extdata/README/Overview.png)
 
 ## Contributions
 

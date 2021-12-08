@@ -33,12 +33,15 @@ snpToDrug <- function(CYP) {
     stop("CYP isoform must be provided as string")
   }
 
+  # Mark the relevant CYP isoforms (the ones associated with some role on drug
+  # metabolism)
   isoforms <- c("CYP1A2", "CYP2B6", "CYP2C8", "CYP2C9", "CYP2C19", "CYP2D6", "CYP3A4")
 
   if (!CYP%in%isoforms){
     return ("No drug associated")
   }
 
+  # Access dataset built according to the above references
   result <- drugs[CYP]
 
   return (result)

@@ -139,7 +139,9 @@ server <- function(input, output) {
 
   snpDetection <- reactive({
     detectSNP(input$cyps,
-              list(input$input1A2, input$input2B6)
+              list(input$input1A2, input$input2B6, input$input2C8,
+                   input$input2C9, input$input2C19, input$input2D6,
+                   input$input3A4)
               )})
 
   # Generate a plot of the distribution of snp across different sections

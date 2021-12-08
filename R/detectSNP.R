@@ -57,15 +57,19 @@ detectSNP <- function(CYPs, seqs) {
     stop("CYP sequences must be provided as list of strings")
   }
 
+  # To count the number of SNP's
   counts <- vector()
+
+  # To mark the position of each SNP
   positions <- vector()
 
 
   for (i in 1:length(CYPs)) {
 
+    # Processing current mutated sequence
     seqVector <- unlist(strsplit(seqs[[i]], ""))
 
-
+    # Processing list of wild-type isoforms to be compared
     wildForm <- baseSeqs[CYPs[[i]]]
     wildFormVector <- unlist(strsplit(wildForm, ""))
 
@@ -75,20 +79,24 @@ detectSNP <- function(CYPs, seqs) {
 
     for (j in 1:length(wildFormVector)) {
 
+      # Comparing each mutated sequence aa to its wild-type
       if (wildFormVector[[j]] != seqVector[[j]]) {
         count = count + 1
+        # Recoding position of SNP
         positions <- append(positions, c(CYPs[[i]], toString(j)))
       }
     }
-
+    # Recording number of SNPs for the current isoform
     counts <- append(counts, count)
 
 
   }
 
+  # Plotting distribution of SNPs found across CYP isoforms
   graphics::barplot(counts, xlab="CYP isoform", ylab="Number of nsSNP",
           main="Distribution of nsSNP across sample isoforms", names.arg=CYPs, col="green")
 
+  # Returning the position of each mutation found
   return (positions)
 
 }

@@ -49,20 +49,28 @@ snpDist <- function(CYP, seq) {
     stop("CYP sequences must be provided as a string")
   }
 
+  # Marking number of SNPs
   counts <- vector()
+  # Marking each section of 50 aan
   sections <- vector()
-  seqVector <- unlist(strsplit(seq, ""))
 
+  # Processing mutated and wild-type sequence for the isoform to be analyzed
+  seqVector <- unlist(strsplit(seq, ""))
   wildForm <- baseSeqs[CYP]
   wildFormVector <- unlist(strsplit(wildForm, ""))
 
 
 
-
+  # Iterating through each section
   for (i in 1:(length(wildFormVector)/50)) {
     count <- 0
     for (j in 1:50) {
+
+      # Guarantees that last section will be properly processed
       if (((50*(i-1))+j)>length(wildFormVector)) {break}
+
+      # For each aa in the current section, compare it with corresponding
+      # wild-type
       if (wildFormVector[[(50*(i-1))+j]] != seqVector[[(50*(i-1))+j]]) {
         count = count + 1
       }
@@ -71,7 +79,8 @@ snpDist <- function(CYP, seq) {
     sections <- append(sections, toString((i-1)*50))
   }
 
-
+  # Plotting distribution of SNPs across all sections of the CYP protein
+  # analized, as compared to its wild type
   graphics::barplot(counts, xlab="Protein Section", ylab="Number of nsSNP",
           main="Distribution of nsSNP across sequence", names.arg=sections, col="red")
 
@@ -79,6 +88,7 @@ snpDist <- function(CYP, seq) {
 
   names(counts) <- sections
 
+  # Return number of SNPs at each 50-aa section of the mutated CYP analyzed
   return (counts)
 
 }
