@@ -51,6 +51,11 @@ To list all sample datasets available in the package:
 data(package = "snpCYP")
 ```
 
+To run the shinyApp:
+```{r eval=FALSE}
+snpCYP::runsnpCYP()
+```
+
 <br>
 
 ## Functions
